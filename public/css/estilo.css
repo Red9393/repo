@@ -1,0 +1,15 @@
+div#principal{
+    min-height: calc(90vh)
+}
+
+div#footer{
+    min-height: calc(10vh)
+}
+
+li:hover{ 
+    cursor: pointer;
+}
+
+p{
+    font-style: italic;
+}
