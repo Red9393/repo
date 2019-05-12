@@ -64,27 +64,29 @@ $( document ).ready(function() {
             <thead>
                 <tr>
                     <th>Actividad</th>
-                    <th>Parámetro</th>
-                    <th>Unidad</th>
                     <th>Valor</th>
+                    <th>Parámetro</th>
                     <th>Fecha</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 1</td>
-                    <td>Row 1 Data 2</td>
-                    <td>Row 1 Data 1</td>
-                </tr>
-                <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Row 2 Data 2</td>
-                    <td>Row 2 Data 1</td>
-                    <td>Row 2 Data 2</td>
-                    <td>Row 2 Data 1</td>
-                </tr>
+                @if(isset($entrenamientos))
+                    @foreach ($entrenamientos as $entrenamiento)
+                    <tr>
+                        <td>{{ $entrenamiento->actividad_name }}</td>
+                        <td>{{ $entrenamiento->valor_parametro }}</td>
+                        <td>{{ $entrenamiento->parametros_name }}</td>
+                        <td>{{ $entrenamiento->fecha }}</td>
+                    </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td>Sin definir o nula</td>
+                        <td>Sin definir o nula</td>
+                        <td>Sin definir o nula</td>
+                        <td>Sin definir o nula</td>
+                    </tr>
+                @endif
             </tbody>
         </table>
     </div>

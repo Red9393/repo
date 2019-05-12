@@ -19,6 +19,5 @@ class DatabaseSeeder extends Seeder
         $this->call(EntrenamientosTableSeeder::class);
         $this->call(ParametrosTableSeeder::class);
         $this->call(TrainerasTableSeeder::class);
-        $this->call(UnidadesTableSeeder::class);
     }
 }

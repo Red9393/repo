@@ -24,4 +24,4 @@ Route::get('/mesociclos', 'mesociclosController@index')->name('mesociclos');
 Route::get('/entrenamientos', 'entrenamientosController@index')->name('entrenamientos');
 Route::get('/alineacion', 'alineacionController@index')->name('alineacion');
 Route::get('/datosPersonales', 'datosPersonalesController@index')->name('datosPersonales');
-Route::get('/historial', function () {return view('historial');})->name('historial');
+Route::get('/historial', 'historialController@index')->name('historial');
