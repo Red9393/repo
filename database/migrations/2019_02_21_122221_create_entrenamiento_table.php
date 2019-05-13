@@ -22,7 +22,11 @@ class CreateEntrenamientoTable extends Migration
             $table->foreign('id_actividad')->references('id')->on('actividad');
             $table->integer('id_parametro')->unsigned();
             $table->foreign('id_parametro')->references('id')->on('parametros');
-            $table->string('valor_parametro');
+            $table->string('valor_parametro'); 
+
+            // $table->string('actividad');
+            // $table->string('parametro');
+            // $table->integer('valor');
 
             $table->rememberToken();
         });
